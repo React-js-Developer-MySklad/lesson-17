@@ -2,7 +2,7 @@ import React, { memo, NamedExoticComponent, useCallback, KeyboardEvent, useMemo 
 import { Button } from 'antd';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import {NumberInputProps} from "../input.type";
-import {useCreateUpDown} from "../useCreateUpDown/useCreateUpDown";
+import {useCreateUpDown} from "../use-create-up-down/use-create-up-down";
 
 
 export const withArrows = (Component: React.ElementType<NumberInputProps>): NamedExoticComponent<NumberInputProps> =>
@@ -43,7 +43,7 @@ export const withArrows = (Component: React.ElementType<NumberInputProps>): Name
         );
 
         return (
-            <div>
+            <div style={{display: "flex"}}>
                 <Button data-testid="down" disabled={disabled} onClick={down}>
                     <DownOutlined />
                 </Button>

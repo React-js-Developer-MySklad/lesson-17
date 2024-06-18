@@ -15,9 +15,9 @@ export const HigherOrderComponent = () => {
     const [onlyDigitValue, setOnlyDigitValue] = useState('')
 
     return (
-        <>
+        <div style={{width: 500}}>
             {/*<h2>Ant Design Input</h2>*/}
-            {/*<IntInput value={numberValue} onChange={setNumberValue}/>*/}
+            <IntInput value={numberValue} onChange={setNumberValue}/>
 
             {/*<h2>Ant Design Input + Arrows</h2>*/}
             {/*<IntInputWithArrows value={numberValue} onChange={setNumberValue}/>*/}
@@ -26,20 +26,14 @@ export const HigherOrderComponent = () => {
             {/*{JSON.stringify(numberRangeValue)}*/}
             {/*<IntRangeInput value={numberRangeValue} onChange={setNumberRangeValue}/>*/}
 
-            {/*<h2>Ant Design Input with Digit filter</h2>*/}
-            {/*<OnlyDigitInput value={onlyDigitValue} onChange={setOnlyDigitValue} />*/}
 
-            {/*<h2>Ant Design with filter not One</h2>*/}
-            {/*<InputWithoutOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>*/}
+            <h2>HOC Partial Apply</h2>
+            <OnlyDigitInput placeholder='Введите цифру' value={onlyDigitValue} onChange={setOnlyDigitValue} />
+            <InputWithoutOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>
+            <InputWithOnlyDigitAndNotOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>
 
-            {/*<h2>Ant Design Input with Digit and not one filter</h2>*/}
-            {/*<InputWithOnlyDigitAndNotOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>*/}
-
-            {/*<h2>HOC with filters non One and only Digits</h2>*/}
-            {/*<InputWithHOCComposition value={numberRangeValue} onChange={setNumberRangeValue}/>*/}
-
-
-
-        </>
+            <h2>HOC Partial Apply + Composition</h2>
+            <InputWithHOCComposition value={numberRangeValue} onChange={setNumberRangeValue}/>
+        </div>
     )
 }

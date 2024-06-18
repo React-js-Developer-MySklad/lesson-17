@@ -16,7 +16,7 @@ export type RangeInputProps<T> = {
     onChange: (value: RangeInputValue<T>) => void;
 };
 
-export const createRangeInput = <T, P = Record<string, unknown>>(
+export const withRangeInput = <T, P = Record<string, unknown>>(
     InputComponent: React.ComponentType<InputComponentProps<T>>
 ): NamedExoticComponent<RangeInputProps<T> & P> =>
     memo(({ className, value, onChange, ...props }) => {
@@ -33,12 +33,12 @@ export const createRangeInput = <T, P = Record<string, unknown>>(
         );
 
         return (
-            <div className={className}>
-                <div >
+            <div className={className} style={{display: 'flex'}}>
+                <div>
                     <strong>From</strong>
                     <InputComponent {...props} value={value?.from} onChange={onChangeFrom} />
                 </div>
-                <div >
+                <div style={{marginLeft: 16}}>
                     <strong>To</strong>
                     <InputComponent {...props} value={value?.to} onChange={onChangeTo} />
                 </div>
