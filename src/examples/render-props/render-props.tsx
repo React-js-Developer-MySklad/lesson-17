@@ -6,16 +6,17 @@ import {RenderPropsAsJSX} from "./render-props-as-jsx/render-props-as-jsx";
 export const RenderProps = () => {
     return (
         <>
-            <RenderPropsAsFunction renderCount={
-                count => (
-                    <Badge count={count}>
-                        <Avatar shape="square" size="large"/>
-                    </Badge>
-                )
-            }
-            >
-                Content as Children
-            </RenderPropsAsFunction>
+            {/*<RenderPropsAsFunction renderCount={*/}
+            {/*    count => (*/}
+            {/*        <Badge count={count}>*/}
+            {/*            <Avatar shape="square" size="large"/>*/}
+            {/*        </Badge>*/}
+            {/*    )*/}
+            {/*}*/}
+            {/*>*/}
+            {/*    Content as Children*/}
+            {/*</RenderPropsAsFunction>*/}
+
             <RenderPropsAsJSX header={<div>header</div>} footer={<div>footer</div>}/>
         </>
     )

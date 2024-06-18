@@ -1,8 +1,8 @@
 import { Button } from "antd";
-import {FC, useReducer} from "react";
+import {FC, ReactNode, useReducer} from "react";
 
 interface FunctionAsChildrenExampleProps {
-    children: (count: number) => React.ReactNode;
+    children?: (count: number) => ReactNode;
 }
 
 export const FunctionAsChildrenExample: FC<FunctionAsChildrenExampleProps> = ({ children }) => {

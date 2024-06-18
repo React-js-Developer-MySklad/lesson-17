@@ -59,8 +59,14 @@ export const Advanced = () => {
 
             {/*<ChildrenCheck>*/}
             {/*    {(() => {*/}
-            {/*        if (loading) return <div>loading</div>;*/}
-            {/*        if (error) return <div>{error.message}</div>;*/}
+            {/*        if (loading) { */}
+            {/*            return <div>loading</div>;*/}
+            {/*        }*/}
+            {/*        */}
+            {/*        if (error) {*/}
+            {/*            return <div>{error.message}</div>;*/}
+            {/*        }*/}
+            {/*        */}
             {/*        if (!data && !error && !loading) return <div>Idle State</div>*/}
 
             {/*        return JSON.stringify(data);*/}
@@ -73,10 +79,13 @@ export const Advanced = () => {
             {/*            ? <div>loading</div>*/}
             {/*            : error*/}
             {/*                ? <div>{error.message}</div>*/}
-            {/*                : data ? JSON.stringify(data) : <div>Idle State</div>}*/}
+            {/*                : data*/}
+            {/*                    ? JSON.stringify(data)*/}
+            {/*                    : <div>Idle State</div>*/}
+            {/*    }*/}
             {/*</ChildrenCheck>*/}
 
-            {/*<HandleQueryComponent loading={loading} error={error} data={data}/>*/}
+            <HandleQueryComponent loading={loading} error={error} data={data}/>
 
         </div>
     );

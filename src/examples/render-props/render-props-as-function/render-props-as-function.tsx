@@ -1,9 +1,9 @@
-import {FC, useReducer} from "react";
+import {FC, memo, ReactElement, ReactNode, useReducer} from "react";
 import {Button} from "antd";
 
 interface RenderPropsAsFunctionProps {
-    renderCount: (count: number) => React.ReactElement;
-    children?: React.ReactNode;
+    renderCount: (count: number) => ReactElement;
+    children?: ReactNode;
 }
 
 export const RenderPropsAsFunction: FC<RenderPropsAsFunctionProps> = ({ renderCount, children }) => {

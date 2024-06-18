@@ -16,8 +16,8 @@ export const HigherOrderComponent = () => {
 
     return (
         <div style={{width: 500}}>
-            {/*<h2>Ant Design Input</h2>*/}
-            <IntInput value={numberValue} onChange={setNumberValue}/>
+            {/*<h2>IntInput</h2>*/}
+            {/*<IntInput value={numberValue} onChange={setNumberValue}/>*/}
 
             {/*<h2>Ant Design Input + Arrows</h2>*/}
             {/*<IntInputWithArrows value={numberValue} onChange={setNumberValue}/>*/}
@@ -28,11 +28,12 @@ export const HigherOrderComponent = () => {
 
 
             <h2>HOC Partial Apply</h2>
-            <OnlyDigitInput placeholder='Введите цифру' value={onlyDigitValue} onChange={setOnlyDigitValue} />
-            <InputWithoutOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>
-            <InputWithOnlyDigitAndNotOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>
+            {/*<OnlyDigitInput placeholder='Введите цифру' value={onlyDigitValue} onChange={setOnlyDigitValue} />*/}
+            {/*<InputWithoutOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>*/}
 
-            <h2>HOC Partial Apply + Composition</h2>
+
+            {/*<h2>HOC Partial Apply + Composition</h2>*/}
+            {/*<InputWithOnlyDigitAndNotOne onChange={setOnlyDigitValue} value={onlyDigitValue}/>*/}
             <InputWithHOCComposition value={numberRangeValue} onChange={setNumberRangeValue}/>
         </div>
     )

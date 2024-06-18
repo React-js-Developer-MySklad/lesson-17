@@ -3,7 +3,7 @@ import {InputNumber} from "antd";
 import {NumberInputProps} from "../input.type";
 
 
-export const parser = (v: string): number => {
+export const onlyDigitsParser = (v: string): number => {
     const value = parseInt(v?.replace(/[^\d-]/g, ''), 10);
     if (Number.isNaN(value)) return 0;
     return value;
@@ -19,7 +19,7 @@ export const IntInput = memo<Props>(
                 className={className}
                 placeholder='Введите цифры'
                 {...props}
-                parser={parser}
+                parser={onlyDigitsParser}
             />
         );
     });

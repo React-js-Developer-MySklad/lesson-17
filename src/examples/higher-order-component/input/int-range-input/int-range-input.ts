@@ -4,6 +4,5 @@ import {IntInputWithArrows} from "../int-number-with-arrows/int-number-with-arro
 
 export type IntRangeInputProps = RangeInputProps<number>;
 
-export const IntRangeInput = withRangeInput<number, Omit<InputNumberProps<number>, 'value' | 'onChange'>>(
-    IntInputWithArrows
-);
+export const IntRangeInput =
+    withRangeInput<number, Omit<InputNumberProps<number>, 'value' | 'onChange'>>(IntInputWithArrows);

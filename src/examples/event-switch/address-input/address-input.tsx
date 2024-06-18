@@ -14,31 +14,33 @@ export type AddressInputProps = {
   onChange: (value: Address, name: string) => void;
 };
 
-export const AddressInput = memo<AddressInputProps>(({ className, value, name, onChange }) => {
-  const valueCopy = useRef(value);
-  valueCopy.current = value;
+export const AddressInput = memo<AddressInputProps>(
+    ({ className, value, name, onChange }) => {
 
-  const handleChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      onChange(
-        {
-          ...(valueCopy.current || {}),
-          [e.target.name]: e.target.value,
-        },
-        name
-      );
-    },
-    [onChange, name]
-  );
+        const valueCopy = useRef(value);
+        valueCopy.current = value;
 
-  return (
-    <div className={className}>
-      <div>city</div>
-      <MemoInput name="city" value={value?.city} onChange={handleChange} />
-      <div>street</div>
-      <MemoInput name="street" value={value?.street} onChange={handleChange} />
-      <div>house</div>
-      <MemoInput name="house" value={value?.house} onChange={handleChange} />
-    </div>
-  );
-});
+        const handleChange = useCallback(
+            (e: ChangeEvent<HTMLInputElement>) => {
+                onChange(
+                    {
+                        ...(valueCopy.current || {}),
+                        [e.target.name]: e.target.value,
+                    },
+                    name
+                );
+            },
+            [onChange, name]
+        );
+
+        return (
+            <div className={className}>
+                <div>city</div>
+                <MemoInput name="city" value={value?.city} onChange={handleChange}/>
+                <div>street</div>
+                <MemoInput name="street" value={value?.street} onChange={handleChange}/>
+                <div>house</div>
+                <MemoInput name="house" value={value?.house} onChange={handleChange}/>
+            </div>
+        );
+    });

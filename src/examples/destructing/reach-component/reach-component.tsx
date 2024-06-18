@@ -8,14 +8,14 @@ type ReachProps = {
 export const RichComponent: FC<ReachProps> = ({ four, ...props }) => (
     <>
         {/* JSX attributes spread order*/}
-        <PoorComponent one="2" three={4} {...props} />
-        <PoorComponent one="2" {...props} three={4} />
+        {/*<PoorComponent one="2" three={4} {...props} />*/}
+        {/*<PoorComponent one="2" {...props} three={4} />*/}
 
-        {/* two type */}
-        <PoorComponent {...{ two: '' }} {...{ two: '2' }} {...{ two: undefined }}   />
+        {/*/!* two type *!/*/}
+        {/*<PoorComponent {...{ two: '' }} {...{ two: '2' }} {...{ two: undefined }}   />*/}
 
-        {/* Optional value */}
-        <PoorComponent one="" />
+        {/*/!* Optional value *!/*/}
+        {/*<PoorComponent />*/}
 
     </>
 );

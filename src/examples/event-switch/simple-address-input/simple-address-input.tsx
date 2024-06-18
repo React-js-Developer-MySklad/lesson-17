@@ -13,7 +13,9 @@ export type SimpleAddressInputProps = {
   onChange: (value: Address) => void;
 };
 
-export const SimpleAddressInput = memo<SimpleAddressInputProps>(({ className, value, onChange }) => {
+export const SimpleAddressInput = memo<SimpleAddressInputProps>(
+    ({ className, value, onChange }) => {
+
   const valueCopy = useRef(value);
   valueCopy.current = value;
 

@@ -19,6 +19,7 @@ export type RangeInputProps<T> = {
 export const withRangeInput = <T, P = Record<string, unknown>>(
     InputComponent: React.ComponentType<InputComponentProps<T>>
 ): NamedExoticComponent<RangeInputProps<T> & P> =>
+
     memo(({ className, value, onChange, ...props }) => {
 
         const valueCopy = useRef(value);
