@@ -44,7 +44,6 @@ const formatter = compose(getWithoutOne, getOnlyDigits);
 const withHOCComposition = compose(withRangeInput<number>, withArrows, withFormat(formatter));
 export const InputWithHOCComposition = withHOCComposition(MyInput);
 
-const withOnlyDigitAndNotOne = withFormat(formatter);
-export const InputWithOnlyDigitAndNotOne = withOnlyDigitAndNotOne(MyInput);
+export const InputWithOnlyDigitAndNotOne = withFormat(formatter)(MyInput);
 
 

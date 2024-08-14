@@ -5,9 +5,11 @@ type ReachProps = {
     four?: number;
 } & PoorComponentProps;
 
-export const RichComponent: FC<ReachProps> = ({ four, ...props }) => (
+export const RichComponent: FC<ReachProps> =
+    ({ four, ...props }) => (
     <>
         {/* JSX attributes spread order*/}
+        {four}
         {/*<PoorComponent one="2" three={4} {...props} />*/}
         {/*<PoorComponent one="2" {...props} three={4} />*/}
 

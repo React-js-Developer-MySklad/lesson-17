@@ -15,13 +15,13 @@ export const Simple: FC = () => {
             <ChildrenCheck>
                 {visible && <Test id="1">Видно если true</Test>}
                 {visible || <Test id="2">Видно если false</Test>}
-                <Divider/>
+                {/*<Divider/>*/}
 
                 {visible
                     ? <Test id="3">Видно если true</Test>
                     : <Test id="4">Видно если false</Test>
                 }
-                <br/>
+                {/*<br/>*/}
             </ChildrenCheck>
             <Button onClick={toggle}>toggle</Button>
         </div>

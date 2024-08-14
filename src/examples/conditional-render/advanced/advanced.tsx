@@ -43,6 +43,8 @@ export const Advanced = () => {
             .catch(setError);
     };
 
+    const isIdle = !data && !error && !loading;
+
     return (
         <div>
             <Button onClick={onFetch}>запросить данные</Button>
@@ -53,7 +55,7 @@ export const Advanced = () => {
             {/*<ChildrenCheck>*/}
             {/*    {loading && <div>loading</div>}*/}
             {/*    {error && <div>{error.message}</div>}*/}
-            {/*    {!data && !error && !loading && <div>Idle State</div>}*/}
+            {/*    {isIdle && <div>Idle State</div>}*/}
             {/*    {data && JSON.stringify(data)}*/}
             {/*</ChildrenCheck>*/}
 
@@ -85,7 +87,7 @@ export const Advanced = () => {
             {/*    }*/}
             {/*</ChildrenCheck>*/}
 
-            <HandleQueryComponent loading={loading} error={error} data={data}/>
+            {/*<HandleQueryComponent loading={loading} error={error} data={data}/>*/}
 
         </div>
     );

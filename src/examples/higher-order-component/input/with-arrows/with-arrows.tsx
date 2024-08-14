@@ -5,7 +5,8 @@ import {NumberInputProps} from "../input.type";
 import {useCreateUpDown} from "../use-create-up-down/use-create-up-down";
 
 
-export const withArrows = (Component: React.ElementType<NumberInputProps>): NamedExoticComponent<NumberInputProps> =>
+export const withArrows =
+    (Component: React.ElementType<NumberInputProps>): NamedExoticComponent<NumberInputProps> =>
     memo(({ value, onChange, max, onKeyDown, min, disabled, className, ...props }) => {
         const createUpDown = useCreateUpDown(value, onChange, { max, min });
 
